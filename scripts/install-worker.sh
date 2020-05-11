@@ -5,14 +5,7 @@ set -o nounset
 set -o errexit
 IFS=$'\n\t'
 
-TEMPLATE_DIR=${TEMPLATE_DIR:-/tmp/worker}
-# hack to make sure works
-"mkdir -p $TEMPLATE_DIR"
-################################################################################
-### Debug steps ################################################
-################################################################################
-echo "BEGIN DEBUG"
-ls -l $TEMPLATE_DIR
+TEMPLATE_DIR=${TEMPLATE_DIR:-/home/ec2-user/worker}
 
 ################################################################################
 ### Validate Required Arguments ################################################
